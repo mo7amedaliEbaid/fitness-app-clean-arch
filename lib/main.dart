@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fitness_app/config/app_theme.dart'as theme;
 
 import 'config/routes.dart';
-import 'features/articles/presentation/bloc/exercise/remote/remote_exercise_bloc.dart';
-import 'features/articles/presentation/pages/home/exercises.dart';
+import 'features/exercises/presentation/bloc/exercise/remote/remote_exercise_bloc.dart';
+import 'features/exercises/presentation/pages/home/exercises.dart';
 import 'injection_container.dart';
 
 Future<void> main() async {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../features/articles/domain/entities/exercise.dart';
-import '../features/articles/presentation/pages/bookmarked_exercise/bookmarked_exercise.dart';
-import '../features/articles/presentation/pages/exercise_details/exercise_details.dart';
-import '../features/articles/presentation/pages/home/exercises.dart';
+import '../features/exercises/domain/entities/exercise.dart';
+import '../features/exercises/presentation/pages/bookmarked_exercise/bookmarked_exercise.dart';
+import '../features/exercises/presentation/pages/exercise_details/exercise_details.dart';
+import '../features/exercises/presentation/pages/home/exercises.dart';
 
 
 sealed class AppRoutes {
