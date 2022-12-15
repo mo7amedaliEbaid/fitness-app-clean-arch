@@ -1,7 +1,7 @@
 # fitness_app
 
 - Flutter Fitness App.
-- Contains Different Excercises.
+- Contains Different Exercises.
 - Clean Architecture.
 - Bloc State Management.
 - Api => retrofit.
