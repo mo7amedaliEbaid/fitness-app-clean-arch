@@ -10,6 +10,7 @@
 - Responsive Design.
 - Details Screen.
 - Bookmarks.
+- Gif Animation.
 
 ### Attention.
 - Your Api Key from RapidApi is required.
