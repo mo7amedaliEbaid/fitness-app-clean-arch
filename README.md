@@ -1,16 +1,34 @@
 # fitness_app
 
-A new Flutter project.
+- Flutter Fitness App.
+- Contains Different Excercises.
+- Clean Architecture.
+- Bloc State Management.
+- Api => retrofit.
+- Local => floor.
+- Injection Container => get_it.
+- Responsive Design.
+- Details Screen.
+- Bookmarks.
 
-## Getting Started
+### Attention.
+- Your Api Key from RapidApi is required.
 
-This project is a starting point for a Flutter application.
+### Demo Video.
 
-A few resources to get you started if this is your first Flutter project:
+<a href="https://youtu.be/UR2asQPMvmc?si=y8Qyj0iF_yjXAInR"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="170"></img></a>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screen Shots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p float="left">
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/exercises.jpg" width="190" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details.jpg" width="190" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/bookmarks.jpg" width="190" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details3.jpg" width="190" />
+</p>
+
+<p float="left">
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/exercises-wide.jpg" width="590" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details-wide.jpg" width="590" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/bookmarks-wide.jpg" width="590" />
+</p>
