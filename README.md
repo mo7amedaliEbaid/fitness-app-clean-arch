@@ -21,6 +21,7 @@
 
 ## Screen Shots
 
+#### Portrait.
 <p float="left">
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/exercises.jpg" width="190" />
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details.jpg" width="190" />
@@ -28,6 +29,7 @@
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details3.jpg" width="190" />
 </p>
 
+#### Landscape.
 <p float="left">
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/exercises-wide.jpg" width="590" />
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details-wide.jpg" width="590" />
