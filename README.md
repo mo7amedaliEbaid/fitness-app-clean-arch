@@ -1,13 +1,14 @@
 # fitness_app
 
 - Flutter Fitness App.
+- Multiplatform (Android, Ios, Desktop " tested on linux ").
 - Contains Different Exercises.
 - Clean Architecture.
 - Bloc State Management.
 - Api => retrofit.
 - Local => floor.
 - Injection Container => get_it.
-- Responsive Design.
+- Responsive Design (Portrait, Landscape, Desktop).
 - Details Screen.
 - Bookmarks.
 - Gif Animation.
@@ -31,7 +32,13 @@
 
 #### Landscape.
 <p float="left">
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/exercises-wide.jpg" width="590" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details-wide.jpg" width="590" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/bookmarks-wide.jpg" width="590" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/exercises-wide.jpg" width="520" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details-wide.jpg" width="520" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/bookmarks-wide.jpg" width="520" />
+</p>
+
+#### Desktop "Linux".
+<p float="left">
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/b679d143291fd259739c353c120ef38e31a9d07e/screenshots/linux.png" width="790" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/b679d143291fd259739c353c120ef38e31a9d07e/screenshots/linux1.png" width="790" />
 </p>
