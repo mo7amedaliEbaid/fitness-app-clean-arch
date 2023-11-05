@@ -46,6 +46,7 @@ dependencies:
 
   #Database
   floor: any
+  sqlite3_flutter_libs:
 
   #make request to api
   retrofit:
