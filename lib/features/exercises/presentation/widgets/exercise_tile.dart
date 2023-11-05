@@ -23,17 +23,20 @@ class ExerciseWidget extends StatelessWidget {
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: _onTap,
-      child: Container(
-        padding: Space.all(),
-        height: AppDimensions.normalize(70),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildImage(context),
-            Space.x!,
-            _buildNameAndDescription(),
-            _buildRemovableArea(),
-          ],
+      child: Card(
+        elevation: 5,
+        child: Container(
+          padding: Space.all(),
+          height: AppDimensions.normalize(70),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildImage(context),
+              Space.x!,
+              _buildNameAndDescription(),
+              _buildRemovableArea(),
+            ],
+          ),
         ),
       ),
     );
@@ -84,7 +87,7 @@ class ExerciseWidget extends StatelessWidget {
               exercise!.name ?? '',
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: AppText.h3b,
+              style: AppText.h3b?.copyWith(color: Colors.amber.shade900),
             ),
             Space.y!,
             Padding(
@@ -101,9 +104,10 @@ class ExerciseWidget extends StatelessWidget {
                     "Equpment: ",
                     style: AppText.b2b,
                   ),
+                  Space.xf(.5),
                   Text(
                     "${exercise!.equipment}" ?? '',
-                    style: AppText.b2,
+                    style: AppText.b1b?.copyWith(color: Colors.red),
                   ),
                 ],
               ),
@@ -122,44 +126,32 @@ class ExerciseWidget extends StatelessWidget {
                   "Body Part: ",
                   style: AppText.b2b,
                 ),
+                Space.xf(.5),
                 Text(
                   "${exercise!.bodyPart}" ?? '',
-                  style: AppText.b2,
+                  style: AppText.b1b?.copyWith(color: Colors.blue.shade100),
                 ),
               ],
             ),
             Space.yf(.2),
-            Column(
+            Row(
               children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.person_search,
-                      color: Colors.blue,
-                      size: AppDimensions.normalize(10),
-                    ),
-                    Space.xf(.5),
-                    Text(
-                      "Secondary muscle: ",
-                      style: AppText.b2b,
-                    ),
-
-                  ],
+                Icon(
+                  Icons.person_search,
+                  color: Colors.blue,
+                  size: AppDimensions.normalize(10),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: AppDimensions.normalize(50),
-                      child: Text(
-                        "${exercise!.secondaryMuscles}" ?? '',
-                        style: AppText.b2,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                      ),
-                    ),
-                  ],
-                )
+                Space.xf(.5),
+                Text(
+                  "Secondary muscle: ",
+                  style: AppText.b2b,
+                ),
+                Space.xf(.5),
+                Text(
+                  "${exercise!.secondaryMuscles}",
+                  style: AppText.b1b?.copyWith(color: Colors.green),
+                ),
+
               ],
             ),
           ],

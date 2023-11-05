@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:fitness_app/config/app_typography.dart';
-import '../../../../../injection_container.dart';
+import '../../../../../di/injection_container.dart';
+import '../../../../../responsive/responsive.dart';
 import '../../../domain/entities/exercise.dart';
-
+import 'package:fitness_app/config/configs.dart';
 import '../../bloc/exercise/local/local_exercise_bloc.dart';
 import '../../widgets/exercise_tile.dart';
 
@@ -15,7 +15,8 @@ class Bookmarks extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => sl<LocalExerciseBloc>()..add(const GetSavedExercisesEvent()),
+      create: (_) =>
+          sl<LocalExerciseBloc>()..add(const GetSavedExercisesEvent()),
       child: Scaffold(
         appBar: _buildAppBar(),
         body: _buildBody(),
@@ -25,15 +26,25 @@ class Bookmarks extends HookWidget {
 
   PreferredSizeWidget _buildAppBar() {
     return AppBar(
-      leading: Builder(
-        builder: (context) => GestureDetector(
-          behavior: HitTestBehavior.opaque,
-          onTap: () => _onBackButtonTapped(context),
-          child: const Icon(Icons.arrow_back_ios),
+      automaticallyImplyLeading: false,
+      title: Builder(
+        builder: (context) => Padding(
+          padding: Space.hf(8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+
+              GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTap: () => _onBackButtonTapped(context),
+                  child: const Icon(Icons.arrow_back_ios)),
+              const Text('Bookmarks'),
+              Space.xf(5),
+
+            ],
+          ),
         ),
       ),
-      title:
-          const Text('Bookmarks'),
     );
   }
 
@@ -52,20 +63,26 @@ class Bookmarks extends HookWidget {
 
   Widget _buildArticlesList(List<ExerciseEntity> articles) {
     if (articles.isEmpty) {
-      return  Center(
+      return Center(
           child: Text(
-        'NO SAVED ARTICLES',style: AppText.b1b,
+        'NO SAVED ARTICLES',
+        style: AppText.b1b,
       ));
     }
 
     return ListView.builder(
       itemCount: articles.length,
       itemBuilder: (context, index) {
-        return ExerciseWidget(
-          exercise: articles[index],
-          isRemovable: true,
-          onRemove: (article) => _onRemoveArticle(context, article),
-          onExercisePressed: (article) => _onArticlePressed(context, article),
+        return Padding(
+          padding: Responsive.isDesktop(context)
+              ? EdgeInsets.symmetric(horizontal: AppDimensions.normalize(70))
+              : const EdgeInsets.all(0),
+          child: ExerciseWidget(
+            exercise: articles[index],
+            isRemovable: true,
+            onRemove: (article) => _onRemoveArticle(context, article),
+            onExercisePressed: (article) => _onArticlePressed(context, article),
+          ),
         );
       },
     );
@@ -76,7 +93,8 @@ class Bookmarks extends HookWidget {
   }
 
   void _onRemoveArticle(BuildContext context, ExerciseEntity article) {
-    BlocProvider.of<LocalExerciseBloc>(context).add(RemoveExerciseEvent(article));
+    BlocProvider.of<LocalExerciseBloc>(context)
+        .add(RemoveExerciseEvent(article));
   }
 
   void _onArticlePressed(BuildContext context, ExerciseEntity article) {

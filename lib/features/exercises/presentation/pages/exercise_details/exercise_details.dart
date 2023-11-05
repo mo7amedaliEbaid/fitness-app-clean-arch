@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fitness_app/config/configs.dart';
-import '../../../../../injection_container.dart';
+import '../../../../../di/injection_container.dart';
 import '../../../domain/entities/exercise.dart';
 import '../../bloc/exercise/local/local_exercise_bloc.dart';
 
