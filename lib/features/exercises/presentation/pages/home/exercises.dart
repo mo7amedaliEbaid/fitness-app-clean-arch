@@ -23,29 +23,29 @@ class ExercisesPage extends StatelessWidget {
 
   _buildAppbar(BuildContext context) {
     return AppBar(
-      centerTitle: true,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Space.xf(10),
-          const Text(
-            'Exercises',
-          ),
-        ],
-      ),
-      actions: [
-        GestureDetector(
-          onTap: () => _onShowBookmarksViewTapped(context),
-          child: Padding(
-            padding: Space.h1!,
-            child: Icon(
-              Icons.bookmark,
-              size: AppDimensions.normalize(12),
+
+      title: Padding(
+        padding: Space.hf(1),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              'Exercises',
             ),
-          ),
+            GestureDetector(
+              onTap: () => _onShowBookmarksViewTapped(context),
+              child: Padding(
+                padding: Space.h1!,
+                child: Icon(
+                  Icons.bookmark,
+                  size: AppDimensions.normalize(12),
+                ),
+              ),
+            ),
+          ],
         ),
-        Space.xf(10),
-      ],
+      ),
+
     );
   }
 

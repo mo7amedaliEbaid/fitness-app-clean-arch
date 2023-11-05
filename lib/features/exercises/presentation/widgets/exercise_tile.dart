@@ -92,24 +92,26 @@ class ExerciseWidget extends StatelessWidget {
             Space.y!,
             Padding(
               padding: Space.vf(.3),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.sports_gymnastics,
-                    color: Colors.blue,
-                    size: AppDimensions.normalize(10),
-                  ),
-                  Space.xf(.5),
-                  Text(
-                    "Equpment: ",
-                    style: AppText.b2b,
-                  ),
-                  Space.xf(.5),
-                  Text(
-                    "${exercise!.equipment}" ?? '',
-                    style: AppText.b1b?.copyWith(color: Colors.red),
-                  ),
-                ],
+              child: FittedBox(
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.sports_gymnastics,
+                      color: Colors.blue,
+                      size: AppDimensions.normalize(10),
+                    ),
+                    Space.xf(.5),
+                    Text(
+                      "Equpment: ",
+                      style: AppText.b2b,
+                    ),
+                    Space.xf(.5),
+                    Text(
+                      "${exercise!.equipment}" ?? '',
+                      style: AppText.b1b?.copyWith(color: Colors.red),
+                    ),
+                  ],
+                ),
               ),
             ),
 
@@ -134,25 +136,26 @@ class ExerciseWidget extends StatelessWidget {
               ],
             ),
             Space.yf(.2),
-            Row(
-              children: [
-                Icon(
-                  Icons.person_search,
-                  color: Colors.blue,
-                  size: AppDimensions.normalize(10),
-                ),
-                Space.xf(.5),
-                Text(
-                  "Secondary muscle: ",
-                  style: AppText.b2b,
-                ),
-                Space.xf(.5),
-                Text(
-                  "${exercise!.secondaryMuscles}",
-                  style: AppText.b1b?.copyWith(color: Colors.green),
-                ),
-
-              ],
+            FittedBox(
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.person_search,
+                    color: Colors.blue,
+                    size: AppDimensions.normalize(10),
+                  ),
+                  Space.xf(.5),
+                  Text(
+                    "Secondary muscle: ",
+                    style: AppText.b2b,
+                  ),
+                  Space.xf(.5),
+                  Text(
+                    "${exercise!.secondaryMuscles}",
+                    style: AppText.b1b?.copyWith(color: Colors.green),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

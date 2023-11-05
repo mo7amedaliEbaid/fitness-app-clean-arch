@@ -29,11 +29,10 @@ class Bookmarks extends HookWidget {
       automaticallyImplyLeading: false,
       title: Builder(
         builder: (context) => Padding(
-          padding: Space.hf(8),
+          padding: Space.hf(1),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-
               GestureDetector(
                   behavior: HitTestBehavior.opaque,
                   onTap: () => _onBackButtonTapped(context),
