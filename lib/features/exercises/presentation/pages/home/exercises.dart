@@ -3,8 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fitness_app/config/configs.dart';
-
+import 'package:fitness_app/config/app_theme.dart' as theme;
 import '../../../../../config/app.dart';
+import '../../../../../theme_bloc/theme_bloc.dart';
 import '../../../domain/entities/exercise.dart';
 import '../../bloc/exercise/remote/remote_exercise_bloc.dart';
 import '../../widgets/exercise_tile.dart';
@@ -15,6 +16,7 @@ class ExercisesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     App.init(context);
+
     return Scaffold(
       appBar: _buildAppbar(context),
       body: _buildBody(context),
@@ -23,7 +25,17 @@ class ExercisesPage extends StatelessWidget {
 
   _buildAppbar(BuildContext context) {
     return AppBar(
-
+      actions: [
+        BlocBuilder<ThemeBloc, ThemeData>(
+          builder: (context, themeData) {
+            return CupertinoSwitch(
+                value: themeData == theme.themeLight,
+                onChanged: (bool val) {
+                  BlocProvider.of<ThemeBloc>(context).add(ThemeSwitchEvent());
+                });
+          },
+        ),
+      ],
       title: Padding(
         padding: Space.hf(1),
         child: Row(
@@ -45,7 +57,6 @@ class ExercisesPage extends StatelessWidget {
           ],
         ),
       ),
-
     );
   }
 

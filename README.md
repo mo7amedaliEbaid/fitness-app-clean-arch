@@ -9,6 +9,7 @@
 - Local => floor.
 - Injection Container => get_it.
 - Responsive Design (Portrait, Landscape, Desktop).
+- Multiple themes.
 - Details Screen.
 - Bookmarks.
 - Gif Animation.

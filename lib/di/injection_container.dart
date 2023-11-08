@@ -1,3 +1,4 @@
+import 'package:fitness_app/theme_bloc/theme_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:dio/dio.dart';
 
@@ -55,6 +56,10 @@ Future<void> initializeDependencies() async {
 
   sl.registerFactory<LocalExerciseBloc>(
     ()=> LocalExerciseBloc(sl(),sl(),sl())
+  );
+
+  sl.registerFactory<ThemeBloc>(
+          ()=> ThemeBloc()
   );
 
 
