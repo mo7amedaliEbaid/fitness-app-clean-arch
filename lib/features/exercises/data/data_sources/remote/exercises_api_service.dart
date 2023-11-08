@@ -1,7 +1,7 @@
 import 'package:retrofit/retrofit.dart';
-import '../../../../../core/consts/consts.dart';
 import 'package:dio/dio.dart';
 
+import '../../../../../shared/consts/consts.dart';
 import '../../models/exercise.dart';
 part 'exercises_api_service.g.dart';
 

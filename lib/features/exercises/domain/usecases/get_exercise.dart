@@ -1,7 +1,6 @@
 
-
-import '../../../../core/resources/data_state.dart';
-import '../../../../core/usecase/usecase.dart';
+import '../../../../shared/resources/data_state.dart';
+import '../../../../shared/usecase/usecase.dart';
 import '../entities/exercise.dart';
 import '../repository/exercise_repository.dart';
 

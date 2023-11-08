@@ -4,7 +4,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
-import '../../../../../../core/resources/data_state.dart';
+import '../../../../../../shared/resources/data_state.dart';
 import '../../../../domain/entities/exercise.dart';
 import '../../../../domain/usecases/get_exercise.dart';
 

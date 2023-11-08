@@ -1,5 +1,5 @@
 import 'package:floor/floor.dart';
-import '../../../../core/consts/consts.dart';
+import '../../../../shared/consts/consts.dart';
 import '../../domain/entities/exercise.dart';
 
 @Entity(tableName: 'exercise', primaryKeys: ['id'])

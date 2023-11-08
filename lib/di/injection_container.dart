@@ -1,7 +1,5 @@
-import 'package:fitness_app/theme_bloc/theme_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:dio/dio.dart';
-
 import '../features/exercises/data/data_sources/local/app_database.dart';
 import '../features/exercises/data/data_sources/remote/exercises_api_service.dart';
 import '../features/exercises/data/repository/exercise_repo_impl.dart';
@@ -12,6 +10,7 @@ import '../features/exercises/domain/usecases/remove_exercise.dart';
 import '../features/exercises/domain/usecases/save_exercise.dart';
 import '../features/exercises/presentation/bloc/exercise/local/local_exercise_bloc.dart';
 import '../features/exercises/presentation/bloc/exercise/remote/remote_exercise_bloc.dart';
+import '../shared/theme_bloc/theme_bloc.dart';
 
 
 final sl = GetIt.instance;

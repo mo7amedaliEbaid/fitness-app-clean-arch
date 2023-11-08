@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import '../../../../../di/injection_container.dart';
-import '../../../../../responsive/responsive.dart';
+import '../../../../../shared/responsive/responsive.dart';
 import '../../../domain/entities/exercise.dart';
 import 'package:fitness_app/config/configs.dart';
 import '../../bloc/exercise/local/local_exercise_bloc.dart';
@@ -60,24 +60,24 @@ class Bookmarks extends HookWidget {
     );
   }
 
-  Widget _buildArticlesList(List<ExerciseEntity> articles) {
-    if (articles.isEmpty) {
+  Widget _buildArticlesList(List<ExerciseEntity> exercises) {
+    if (exercises.isEmpty) {
       return Center(
           child: Text(
-        'NO SAVED ARTICLES',
+        'NO SAVED EXERCISES',
         style: AppText.b1b,
       ));
     }
 
     return ListView.builder(
-      itemCount: articles.length,
+      itemCount: exercises.length,
       itemBuilder: (context, index) {
         return Padding(
           padding: Responsive.isDesktop(context)
-              ? EdgeInsets.symmetric(horizontal: AppDimensions.normalize(70))
+              ? EdgeInsets.symmetric(horizontal: AppDimensions.normalize(170))
               : const EdgeInsets.all(0),
           child: ExerciseWidget(
-            exercise: articles[index],
+            exercise: exercises[index],
             isRemovable: true,
             onRemove: (article) => _onRemoveArticle(context, article),
             onExercisePressed: (article) => _onArticlePressed(context, article),

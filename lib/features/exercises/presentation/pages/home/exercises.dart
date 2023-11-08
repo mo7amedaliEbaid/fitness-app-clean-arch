@@ -1,11 +1,11 @@
-import 'package:fitness_app/responsive/responsive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fitness_app/config/configs.dart';
 import 'package:fitness_app/config/app_theme.dart' as theme;
 import '../../../../../config/app.dart';
-import '../../../../../theme_bloc/theme_bloc.dart';
+import '../../../../../shared/responsive/responsive.dart';
+import '../../../../../shared/theme_bloc/theme_bloc.dart';
 import '../../../domain/entities/exercise.dart';
 import '../../bloc/exercise/remote/remote_exercise_bloc.dart';
 import '../../widgets/exercise_tile.dart';
@@ -79,7 +79,7 @@ class ExercisesPage extends StatelessWidget {
               return Padding(
                 padding: Responsive.isDesktop(context)
                     ? EdgeInsets.symmetric(
-                        horizontal: AppDimensions.normalize(70))
+                        horizontal: AppDimensions.normalize(170))
                     : const EdgeInsets.all(0),
                 child: ExerciseWidget(
                   exercise: state.exercises![index],

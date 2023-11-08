@@ -25,6 +25,7 @@ class ExerciseDetailsPage extends HookWidget {
 
   PreferredSizeWidget _buildAppBar() {
     return AppBar(
+      centerTitle: true,
       title: Text("Exercise Details"),
       leading: Builder(
         builder: (context) => GestureDetector(

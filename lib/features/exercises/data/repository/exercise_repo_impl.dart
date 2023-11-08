@@ -2,9 +2,8 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 
-
-import '../../../../core/consts/consts.dart';
-import '../../../../core/resources/data_state.dart';
+import '../../../../shared/consts/consts.dart';
+import '../../../../shared/resources/data_state.dart';
 import '../../domain/entities/exercise.dart';
 import '../../domain/repository/exercise_repository.dart';
 import '../data_sources/local/app_database.dart';

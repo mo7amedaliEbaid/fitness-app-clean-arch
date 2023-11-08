@@ -1,6 +1,5 @@
 
-
-import '../../../../core/resources/data_state.dart';
+import '../../../../shared/resources/data_state.dart';
 import '../entities/exercise.dart';
 
 abstract class ExerciseRepository {
