@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:fitness_app/shared/responsive/responsive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/config/configs.dart';
@@ -28,15 +29,29 @@ class ExerciseWidget extends StatelessWidget {
         child: Container(
           padding: Space.all(),
           height: AppDimensions.normalize(70),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildImage(context),
-              Space.x!,
-              _buildNameAndDescription(),
-              _buildRemovableArea(),
-            ],
-          ),
+          child: isRemovable == false
+              ? Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildImage(context),
+                    Responsive.isMobile(context)
+                        ? Space.x!
+                        : Responsive.isTablet(context)
+                            ? Space.xf(1.5)
+                            : Space.xf(8),
+                    _buildNameAndDescription(),
+                    _buildRemovableArea(),
+                  ],
+                )
+              : Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildImage(context),
+                    Space.x!,
+                    _buildNameAndDescription(),
+                    _buildRemovableArea(),
+                  ],
+                ),
         ),
       ),
     );
@@ -173,7 +188,7 @@ class ExerciseWidget extends StatelessWidget {
         ),
       );
     }
-    return Container();
+    return const SizedBox.shrink();
   }
 
   void _onTap() {

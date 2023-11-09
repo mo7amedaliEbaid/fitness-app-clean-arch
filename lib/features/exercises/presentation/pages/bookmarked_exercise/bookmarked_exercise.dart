@@ -39,7 +39,6 @@ class Bookmarks extends HookWidget {
                   child: const Icon(Icons.arrow_back_ios)),
               const Text('Bookmarks'),
               Space.xf(5),
-
             ],
           ),
         ),
@@ -72,16 +71,11 @@ class Bookmarks extends HookWidget {
     return ListView.builder(
       itemCount: exercises.length,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: Responsive.isDesktop(context)
-              ? EdgeInsets.symmetric(horizontal: AppDimensions.normalize(170))
-              : const EdgeInsets.all(0),
-          child: ExerciseWidget(
-            exercise: exercises[index],
-            isRemovable: true,
-            onRemove: (article) => _onRemoveArticle(context, article),
-            onExercisePressed: (article) => _onArticlePressed(context, article),
-          ),
+        return ExerciseWidget(
+          exercise: exercises[index],
+          isRemovable: true,
+          onRemove: (article) => _onRemoveArticle(context, article),
+          onExercisePressed: (article) => _onArticlePressed(context, article),
         );
       },
     );

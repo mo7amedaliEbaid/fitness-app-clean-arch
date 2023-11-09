@@ -1,3 +1,4 @@
+import 'package:fitness_app/shared/responsive/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -42,15 +43,30 @@ class ExerciseDetailsPage extends HookWidget {
 
   Widget _buildBody() {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          Space.top!,
-          _buildExcerciseTitleandEquip(),
-          Space.y!,
-          _buildExerciseGif(),
-          _buildExerciseInstructions(),
-        ],
-      ),
+      child: Builder(builder: (context) {
+        return Container(
+          margin: Responsive.isDesktop(context)
+              ? EdgeInsets.symmetric(
+                  horizontal: AppDimensions.normalize(100),
+                  vertical: AppDimensions.normalize(30))
+              : Responsive.isTablet(context)
+                  ? EdgeInsets.symmetric(
+                      horizontal: AppDimensions.normalize(50),
+                      vertical: AppDimensions.normalize(20))
+                  : EdgeInsets.symmetric(
+                      horizontal: AppDimensions.normalize(10),
+                      vertical: AppDimensions.normalize(15)),
+          child: Column(
+            children: [
+              Space.top!,
+              _buildExcerciseTitleandEquip(),
+              Space.y!,
+              _buildExerciseGif(),
+              _buildExerciseInstructions(),
+            ],
+          ),
+        );
+      }),
     );
   }
 
@@ -63,14 +79,12 @@ class ExerciseDetailsPage extends HookWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               Text(exercise!.name!, style: AppText.h3b),
-
               Space.y!,
-
               Row(
                 children: [
-                   Icon(Icons.sports_gymnastics,color: Colors.blue, size: AppDimensions.normalize(7)),
+                  Icon(Icons.sports_gymnastics,
+                      color: Colors.blue, size: AppDimensions.normalize(7)),
                   Space.x!,
                   Text(
                     exercise!.equipment!,
@@ -83,10 +97,10 @@ class ExerciseDetailsPage extends HookWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               Row(
                 children: [
-                  Icon(Icons.personal_injury,color: Colors.blue, size: AppDimensions.normalize(7)),
+                  Icon(Icons.personal_injury,
+                      color: Colors.blue, size: AppDimensions.normalize(7)),
                   Space.x!,
                   Text(
                     exercise!.bodyPart!,
@@ -94,12 +108,11 @@ class ExerciseDetailsPage extends HookWidget {
                   ),
                 ],
               ),
-
               Space.y!,
-
               Row(
                 children: [
-                  Icon(Icons.person_search,color: Colors.blue, size: AppDimensions.normalize(7)),
+                  Icon(Icons.person_search,
+                      color: Colors.blue, size: AppDimensions.normalize(7)),
                   Space.x!,
                   Text(
                     exercise!.secondaryMuscles!,
@@ -119,7 +132,10 @@ class ExerciseDetailsPage extends HookWidget {
       width: double.maxFinite,
       height: AppDimensions.normalize(90),
       margin: Space.v,
-      child: Image.network(exercise!.gifUrl!, fit: BoxFit.contain,),
+      child: Image.network(
+        exercise!.gifUrl!,
+        fit: BoxFit.contain,
+      ),
     );
   }
 
@@ -129,7 +145,10 @@ class ExerciseDetailsPage extends HookWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Instructions",style: AppText.h3b?.copyWith(color: Colors.red),),
+          Text(
+            "Instructions",
+            style: AppText.h3b?.copyWith(color: Colors.red),
+          ),
           Space.y1!,
           Text(
             '1- ${exercise!.instruction1 ?? ''}\n\n2- ${exercise!.instruction2 ?? ''}\n\n3- ${exercise!.instruction3 ?? ''}',
@@ -154,7 +173,8 @@ class ExerciseDetailsPage extends HookWidget {
   }
 
   void _onFloatingActionButtonPressed(BuildContext context) {
-    BlocProvider.of<LocalExerciseBloc>(context).add(SaveExerciseEvent(exercise!));
+    BlocProvider.of<LocalExerciseBloc>(context)
+        .add(SaveExerciseEvent(exercise!));
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Exercise saved successfully.'),

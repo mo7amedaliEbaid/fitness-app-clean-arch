@@ -79,8 +79,11 @@ class ExercisesPage extends StatelessWidget {
               return Padding(
                 padding: Responsive.isDesktop(context)
                     ? EdgeInsets.symmetric(
-                        horizontal: AppDimensions.normalize(170))
-                    : const EdgeInsets.all(0),
+                        horizontal: AppDimensions.normalize(100))
+                    : Responsive.isTablet(context)
+                        ? EdgeInsets.symmetric(
+                            horizontal: AppDimensions.normalize(40))
+                        : const EdgeInsets.all(0),
                 child: ExerciseWidget(
                   exercise: state.exercises![index],
                   onExercisePressed: (article) =>
