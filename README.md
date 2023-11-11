@@ -25,21 +25,24 @@
 
 #### Portrait.
 <p float="left">
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/fbc29d83cfc58549c604cc43a927b494696fffd6/screenshots/updated.jpg" width="190" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details.jpg" width="190" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/fbc29d83cfc58549c604cc43a927b494696fffd6/screenshots/updated1.jpg" width="190" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details3.jpg" width="190" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/exercisesdark.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/exerciseslight.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/bookmarksdark.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/bookmarkslight.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/detailsdark.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/detailslight.jpg" width="170" />
 </p>
 
 #### Landscape.
 <p float="left">
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/exercises-wide.jpg" width="520" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/details-wide.jpg" width="520" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/88c625577d6cd7501ba982cc67be95e130cfd46f/screenshots/bookmarks-wide.jpg" width="520" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/landscape.jpg" width="420" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/landscape1.jpg" width="420" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/landscape3.jpg" width="420" />
 </p>
 
 #### Desktop "Linux".
 <p float="left">
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/b679d143291fd259739c353c120ef38e31a9d07e/screenshots/linux.png" width="790" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/b679d143291fd259739c353c120ef38e31a9d07e/screenshots/linux1.png" width="790" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop1.png" width="790" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop4.png" width="790" />
+   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop.png" width="790" />
 </p>
