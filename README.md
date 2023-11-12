@@ -43,6 +43,5 @@
 #### Desktop "Linux".
 <p float="left">
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop1.png" width="790" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop4.png" width="790" />
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop.png" width="790" />
 </p>
