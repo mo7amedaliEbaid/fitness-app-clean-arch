@@ -17,9 +17,7 @@
 ### Attention.
 - Your Api Key from RapidApi is required.
 
-### Demo Video.
 
-<a href="https://youtu.be/UR2asQPMvmc?si=y8Qyj0iF_yjXAInR"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="170"></img></a>
 
 ## Screen Shots
 
