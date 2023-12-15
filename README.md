@@ -1,3 +1,9 @@
+
+
+
+https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/assets/131966482/86396ee0-089b-45ec-90dc-d2452a8349b0
+
+
 # fitness_app
 
 - Flutter Fitness App.
@@ -38,8 +44,4 @@
    <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/landscape3.jpg" width="420" />
 </p>
 
-#### Desktop "Linux".
-<p float="left">
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop1.png" width="790" />
-   <img src="https://github.com/mo7amedaliEbaid/fitness-app-clean-arch/blob/26763c0c24f715760a5fd86b5404d312cd477b4d/screenshots/desktop.png" width="790" />
-</p>
+
