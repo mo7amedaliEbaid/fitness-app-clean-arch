@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fitness_app/shared/responsive/responsive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/config/configs.dart';
@@ -21,37 +20,37 @@ class ExerciseWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onTap: _onTap,
-      child: Card(
-        elevation: 5,
-        child: Container(
-          padding: Space.all(),
-          height: AppDimensions.normalize(70),
-          child: isRemovable == false
-              ? Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _buildImage(context),
-                    Responsive.isMobile(context)
-                        ? Space.x!
-                        : Responsive.isTablet(context)
-                            ? Space.xf(1.5)
-                            : Space.xf(8),
-                    _buildNameAndDescription(),
-                    _buildRemovableArea(),
-                  ],
-                )
-              : Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _buildImage(context),
-                    Space.x!,
-                    _buildNameAndDescription(),
-                    _buildRemovableArea(),
-                  ],
-                ),
+    return SizedBox(
+      width: 450,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: _onTap,
+        child: Card(
+          elevation: 5,
+          child: Container(
+            padding: Space.all(),
+            height: AppDimensions.normalize(70),
+            child: isRemovable == false
+                ? Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildImage(context),
+                      Space.x!,
+                      _buildNameAndDescription(),
+                      _buildRemovableArea(),
+                    ],
+                  )
+                : Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      _buildImage(context),
+                      Space.x!,
+                      _buildNameAndDescription(),
+                      _buildRemovableArea(),
+                    ],
+                  ),
+          ),
         ),
       ),
     );
@@ -72,8 +71,8 @@ class ExerciseWidget extends StatelessWidget {
               child: Container(
                 width: AppDimensions.normalize(55),
                 height: double.maxFinite,
-                child: CupertinoActivityIndicator(),
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
+                child: const CupertinoActivityIndicator(),
               ),
             ),
         errorWidget: (context, url, error) => Padding(
@@ -84,7 +83,7 @@ class ExerciseWidget extends StatelessWidget {
                 child: Container(
                   width: AppDimensions.normalize(55),
                   height: double.maxFinite,
-                  child: Icon(Icons.error),
+                  child: const Icon(Icons.error),
                 ),
               ),
             ));
@@ -95,7 +94,6 @@ class ExerciseWidget extends StatelessWidget {
       child: Padding(
         padding: Space.vf(.4),
         child: Column(
-          //  mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -184,7 +182,7 @@ class ExerciseWidget extends StatelessWidget {
         onTap: _onRemove,
         child: Padding(
           padding: Space.v!,
-          child: Icon(Icons.remove_circle_outline, color: Colors.red),
+          child: const Icon(Icons.remove_circle_outline, color: Colors.red),
         ),
       );
     }

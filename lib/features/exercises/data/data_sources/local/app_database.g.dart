@@ -131,7 +131,7 @@ class _$ExerciseDao extends ExerciseDao {
                   'gifUrl': item.gifUrl,
                   'bodyPart': item.bodyPart,
                   'instruction2': item.instruction2,
-                  'instruction3': item.instruction2
+                  'instruction3': item.instruction3
                 });
 
   final sqflite.DatabaseExecutor database;

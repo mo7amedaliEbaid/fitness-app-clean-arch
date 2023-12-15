@@ -21,10 +21,12 @@ class _ExerciseApiService implements ExerciseApiService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<List<ExerciseModel>>> getExercises(
-      {String? apiKey}) async {
+  Future<HttpResponse<List<ExerciseModel>>> getExercises({
+    String? apiKey,
+    String? limit,
+  }) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'limit': limit};
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{r'X-RapidAPI-Key': apiKey};
     _headers.removeWhere((k, v) => v == null);

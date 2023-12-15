@@ -20,16 +20,17 @@ interface class ExerciseRepoImpl implements ExerciseRepository {
    try {
     final httpResponse = await _exerciseApiService.getExercises(
       apiKey:APPCONSTS.APIKEY,
+      limit: '50',
     );
 
     if (httpResponse.response.statusCode == HttpStatus.ok) {
       return DataLoaded(httpResponse.data);
     } else {
       return DataError(
-        DioError(
+        DioException(
           error: httpResponse.response.statusMessage,
           response: httpResponse.response,
-          type: DioErrorType.badResponse,
+          type: DioExceptionType.badResponse,
           requestOptions: httpResponse.response.requestOptions
         )
       );

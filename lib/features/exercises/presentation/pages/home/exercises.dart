@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -74,27 +76,53 @@ class ExercisesPage extends StatelessWidget {
           ));
         }
         if (state is RemoteExerciseLoaded) {
-          return ListView.builder(
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: Responsive.isDesktop(context)
-                    ? EdgeInsets.symmetric(
-                        horizontal: AppDimensions.normalize(100))
-                    : Responsive.isTablet(context)
-                        ? EdgeInsets.symmetric(
-                            horizontal: AppDimensions.normalize(40))
-                        : const EdgeInsets.all(0),
-                child: ExerciseWidget(
-                  exercise: state.exercises![index],
-                  onExercisePressed: (article) =>
-                      _onArticlePressed(context, article),
-                ),
-              );
-            },
-            itemCount: state.exercises!.length,
-          );
+          return !Responsive.isMobile(context)
+              ? ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context).copyWith(
+                    scrollbars: false,
+                    dragDevices: {
+                      PointerDeviceKind.touch,
+                      PointerDeviceKind.mouse,
+
+                    },
+                  ),
+                  child: SingleChildScrollView(
+
+
+                    child: Wrap(
+                      spacing: AppDimensions.normalize(1),
+                      // Horizontal spacing between items
+                      runSpacing: AppDimensions.normalize(1),
+                      // Vertical spacing between lines of items
+                      children: state.exercises!.map((exercise) {
+                        return Padding(
+                          padding: Space.all(.5, .2),
+                          child: ExerciseWidget(
+                            exercise: exercise,
+                            onExercisePressed: (article) =>
+                                _onArticlePressed(context, article),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                )
+              : ListView.builder(
+                  padding: Space.vf(),
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: Space.all(.5, .2),
+                      child: ExerciseWidget(
+                        exercise: state.exercises![index],
+                        onExercisePressed: (article) =>
+                            _onArticlePressed(context, article),
+                      ),
+                    );
+                  },
+                  itemCount: state.exercises!.length,
+                );
         }
-        return const SizedBox();
+        return const SizedBox.shrink();
       },
     );
   }

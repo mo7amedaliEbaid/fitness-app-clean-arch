@@ -54,7 +54,7 @@ class Bookmarks extends HookWidget {
         } else if (state is LocalExerciseLoaded) {
           return _buildArticlesList(state.exercises!);
         }
-        return Container();
+        return const SizedBox.shrink();
       },
     );
   }

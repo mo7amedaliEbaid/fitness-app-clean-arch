@@ -45,17 +45,9 @@ class ExerciseDetailsPage extends HookWidget {
     return SingleChildScrollView(
       child: Builder(builder: (context) {
         return Container(
-          margin: Responsive.isDesktop(context)
-              ? EdgeInsets.symmetric(
-                  horizontal: AppDimensions.normalize(100),
-                  vertical: AppDimensions.normalize(30))
-              : Responsive.isTablet(context)
-                  ? EdgeInsets.symmetric(
-                      horizontal: AppDimensions.normalize(50),
-                      vertical: AppDimensions.normalize(20))
-                  : EdgeInsets.symmetric(
-                      horizontal: AppDimensions.normalize(10),
-                      vertical: AppDimensions.normalize(15)),
+          margin: EdgeInsets.symmetric(
+              horizontal: AppDimensions.normalize(10),
+              vertical: AppDimensions.normalize(15)),
           child: Column(
             children: [
               Space.top!,

@@ -12,5 +12,6 @@ abstract class ExerciseApiService {
   @GET('/exercises')
   Future<HttpResponse<List<ExerciseModel>>> getExercises({
     @Header("X-RapidAPI-Key") String ? apiKey,
+    @Query("limit") String? limit,
   });
 }

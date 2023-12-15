@@ -37,7 +37,5 @@ class Responsive extends StatelessWidget {
     );
   }
 }
-/*
---> RESPONSIVE - Wrapper
+//--> RESPONSIVE - Wrapper
 
- */
